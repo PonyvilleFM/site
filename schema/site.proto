@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+
+service Users {
+  rpc Register(RegisterCall) returns (User) {
+    option (google.api.http) = {
+      post: "/v1/api/users/register"
+    };
+  }
+  rpc Login(LoginCall) returns (User) {
+    option (google.api.http) = {
+      post: "/v1/api/users/login"
+    };
+  }
+  rpc Info(InfoCall) returns (User) {
+    option (google.api.http) = {
+      get: "/v1/api/users/info"
+    };
+  }
+}
+
+message RegisterCall {
+  User user = 1;
+  string password = 2;
+  string password_confirm  = 3;
+}
+
+message LoginCall {
+  string username = 1;
+  string password = 2;
+}
+
+message InfoCall {
+  string username = 1;
+}
+
+message User {
+  string username = 1;
+  string email = 2;
+  bool is_admin = 3;
+  bool is_dj = 4;
+  string twitter_handle = 5;
+}
