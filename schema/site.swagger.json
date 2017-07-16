@@ -22,7 +22,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/schemaUser"
             }
           }
         },
@@ -46,7 +46,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/schemaUser"
             }
           }
         },
@@ -62,7 +62,7 @@
           "200": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/schemaUser"
             }
           }
         },
@@ -73,7 +73,7 @@
     }
   },
   "definitions": {
-    "InfoCall": {
+    "schemaInfoCall": {
       "type": "object",
       "properties": {
         "username": {
@@ -81,7 +81,7 @@
         }
       }
     },
-    "LoginCall": {
+    "schemaLoginCall": {
       "type": "object",
       "properties": {
         "username": {
@@ -92,11 +92,11 @@
         }
       }
     },
-    "RegisterCall": {
+    "schemaRegisterCall": {
       "type": "object",
       "properties": {
         "user": {
-          "$ref": "#/definitions/User"
+          "$ref": "#/definitions/schemaUser"
         },
         "password": {
           "type": "string"
@@ -106,7 +106,7 @@
         }
       }
     },
-    "User": {
+    "schemaUser": {
       "type": "object",
       "properties": {
         "username": {

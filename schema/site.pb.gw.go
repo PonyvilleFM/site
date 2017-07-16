@@ -3,11 +3,11 @@
 // DO NOT EDIT!
 
 /*
-Package site is a reverse proxy.
+Package schema is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package site
+package schema
 
 import (
 	"io"
